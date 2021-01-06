@@ -29,6 +29,11 @@ Jailor Registration Form
   </div>
 
   <div class="form-group">
+    <label for="nid">Jailor NID</label>
+    <input type="string" name="nid" class="form-control" id="nid" placeholder="Enter your NID"value="{{$jailor->nid}}" >
+  </div>
+
+  <div class="form-group">
     <label for="password">Password</label>
     <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password"value="{{$jailor->password}}" >
   </div>

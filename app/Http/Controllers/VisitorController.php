@@ -17,7 +17,7 @@ class VisitorController extends Controller
         $request->validate(
          [
              'visitor_name'=>'required',
-             'nid'=>'required',
+             'nid'=>'required|unique:visitors|size:10',
              'relation'=>'required',
              'mobile'=>'required|min:10',
              'address'=>'required',
@@ -73,7 +73,7 @@ class VisitorController extends Controller
             {
                 $request->validate([
                     'visitor_name'=>'required',
-                    'nid'=>'required',
+                    'nid'=>'required|min:10|unique:visitors',
                     'relation'=>'required',
                     'mobile'=>'required|min:10',
                     'address'=>'required',

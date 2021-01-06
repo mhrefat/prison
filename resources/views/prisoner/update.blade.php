@@ -23,10 +23,22 @@
     
   </div>
 
+  <div class="form-group" >
+    <label for="nid">Prisoner NID</label>
+    <input type="number" required name="nid" class="form-control" value="{{$prisoner->nid}}"  id="nid" aria-describedby="emailHelp" placeholder="Enter Prisoner NID">
+    
+  </div>
+
   <div class="form-group">
     <label for="crime">Crime</label>
     <input type="text" name="crime" class="form-control" value="{{$prisoner->crime}}" id="crime" placeholder="Enter Prisoner Crime">
   </div>
+
+  <div class="form-group">
+    <label for="crime_details">Crime Details</label>
+    <textarea type="text" name="crime_details" class="form-control" value="{{$prisoner->crime_details}}" id="crime_details" placeholder="Details of Prisoner Crime" cols="20" rows="5"></textarea>
+  </div>
+
 
   <div class="form-group">
     <label for="address">Address</label>
@@ -49,6 +61,15 @@
         <option selected>Choose...</option>
         <option>male</option>
         <option>female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" required name="status" class="form-control">
+        <option selected>Choose...</option>
+        <option>Active</option>
+        <option>Bailed</option>
       </select>
     </div>
 

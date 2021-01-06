@@ -16,6 +16,7 @@ class CreateJailorsTable extends Migration
         Schema::create('jailors', function (Blueprint $table) {
             $table->id();
             $table->string('jailor_name');
+            $table->bigInteger('nid');
             $table->string('email');
             $table->string('password');
             $table->integer('age');

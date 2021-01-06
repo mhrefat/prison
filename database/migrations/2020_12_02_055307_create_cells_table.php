@@ -17,8 +17,8 @@ class CreateCellsTable extends Migration
             $table->id();
             $table->string('cell_name');
             $table->string('status');
-            $table->string('description');
-            $table->string('cell_type');
+            $table->integer('category_id');
+
             $table->timestamps();
         });
     }

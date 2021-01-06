@@ -16,6 +16,7 @@ class JailorController extends Controller
         {
             $request->validate([
                 'jailor_name'=>'required',
+                'nid'=>'required|min:10|unique:jailors',
                 'email'=>'required|email',
                 'password'=>'required|min:8',
                 'age'=>'required',  
@@ -24,6 +25,7 @@ class JailorController extends Controller
         
         $jailors = new Jailor();
         $jailors->jailor_name =$request->jailor_name;
+        $jailors->nid =$request->nid;
         $jailors->email =$request->email;
         $jailors->password =$request->password;
         $jailors->age =$request->age;
@@ -59,6 +61,7 @@ class JailorController extends Controller
         {
             $request->validate([
                 'jailor_name'=>'required',
+                'nid'=>'required|min:10|unique:jailors',
                 'email'=>'required|email',
                 'password'=>'required|min:8',
                 'age'=>'required',  
@@ -67,8 +70,9 @@ class JailorController extends Controller
         
         $jailors =  Jailor::find($id);
         $jailors->jailor_name =$request->jailor_name;
+        $jailors->nid =$request->nid;
         $jailors->email =$request->email;
-        $jailors->password =$request->password;
+        $jailors->password =bcrypt($request->password);
         $jailors->age =$request->age;
         $jailors->address =$request->address;
         $jailors->gender =$request->gender;

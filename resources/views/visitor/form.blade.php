@@ -25,7 +25,7 @@
 
   <div class="form-group">
     <label for="nid">Visitor NID</label>
-    <input type="number" name="nid" class="form-control" id="nid" placeholder="Enter Visitor NID">
+    <input type="number" name="nid"  min="0" oninput="validity.valid||(value='');" class="form-control" id="nid" placeholder="Enter Visitor NID">
   </div>
 
   <div class="form-group">

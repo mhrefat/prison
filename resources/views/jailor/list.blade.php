@@ -8,9 +8,11 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Jailor Name</th>
+            <th scope="col">Officer Name</th>
+            <th scope="col">Officer NID</th>
             <th scope="col">Email</th>
             <th scope="col">Age</th>
+            <th scope="col">Address</th>
             <th scope="col">Gender</th>
             <th scope="col">Action</th>
         </tr>
@@ -20,12 +22,14 @@
             <tr>
                 <th scope="row">{{$key+1}}</th>
                 <td>{{$data->jailor_name}}</td>
+                <td>{{$data->nid}}</td>
                 <td>{{$data->email}}</td>
                 <td>{{$data->age}}</td>
+                <td>{{$data->address}}</td>
                 <td>{{$data->gender}}</td>
                 <td>
                    <a class="btn btn-primary" href="{{route('edit.jailor',$data->id)}}">Edit</a>
-                   <a class="btn btn-danger" href="{{route('jailor.delete',$data->id)}}">Delete</a>
+                   <a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="{{route('jailor.delete',$data->id)}}">Delete</a>
                    <a class="btn btn-warning" href="{{route('view.jailor',$data->id)}}">View</a>
                 </td>
             </tr>

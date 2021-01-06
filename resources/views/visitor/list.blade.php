@@ -1,6 +1,6 @@
 @extends('master')
 @section('page')
-
+<div class="container">
 <h1>Visitors List</h1>
 <div class="container">
 <!--alert message-->
@@ -44,7 +44,7 @@
                 <td>{{$data->purpose}}</td>
                 <td>
                    <a class="btn btn-primary" href="{{route('edit.visitor',$data->id)}}">Edit</a>
-                   <a class="btn btn-danger" href="{{route('delete.visitor',$data->id)}}">Delete</a>
+                   <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')" href="{{route('delete.visitor',$data->id)}}">Delete</a>
                    <a class="btn btn-warning" href="{{route('view.visitor',$data->id)}}">View</a>
                 </td>
             </tr>

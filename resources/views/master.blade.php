@@ -60,7 +60,7 @@
 
              <!-- Begin Page Content -->
                  <div class= "text-center">
-                 <h1>WELCOME TO IUBAT PRISON</h1>
+                 <h1>WELCOME TO KODEEO PRISON</h1>
                  </div> 
                 
 
@@ -74,7 +74,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; KODEEO Prison System 2020</span>
                     </div>
                 </div>
             </footer>
@@ -105,7 +105,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="{{ route('user.logout') }}">Logout</a>
                 </div>
             </div>
         </div>

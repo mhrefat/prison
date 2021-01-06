@@ -2,11 +2,11 @@
  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/prison/public/admin">
     <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">IUBAT PRISON </div>
+    <div class="sidebar-brand-text mx-3" >KODEEO PRISON </div>
 </a>
 
 <!-- Divider -->
@@ -14,7 +14,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="/prison/public/admin">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -37,8 +37,8 @@
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="{{route('jailor.form')}}">Add Jailor</a>
-            <a class="collapse-item" href="{{route('jailor.list')}}">Jailor List</a>
+            <a class="collapse-item" href="{{route('jailor.form')}}">Add Officer</a>
+            <a class="collapse-item" href="{{route('jailor.list')}}">Officer List</a>
         </div>
     </div>
 </li>
@@ -87,7 +87,25 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
             <a class="collapse-item" href="{{route('cell.form')}}">Add New Cell</a>
-            <a class="collapse-item" href="{{route('prisoner.list')}}">View Prisoner Cell</a>
+            <a class="collapse-item" href="{{route('cell.list')}}">View Prisoner Cell</a>
+            <a class="collapse-item" href="{{route('category.form')}}">Add New Category</a>
+            <a class="collapse-item" href="{{route('category.list')}}">View Category List</a>
+        </div>
+    </div>
+</li>
+
+<!-- Priosner cell collapse menu-->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefour"
+        aria-expanded="true" aria-controls="collapsefour">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Case</span>
+    </a>
+    <div id="collapsefour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Components:</h6>
+            <a class="collapse-item" href="{{route('case.form')}}">Add New Case</a>
+            <a class="collapse-item" href="{{route('case.list')}}">View Prisoner Case</a>
         </div>
     </div>
 </li>
@@ -166,7 +184,7 @@
 <!-- Sidebar Message -->
 <div class="sidebar-card">
     <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
-    <p class="text-center mb-2"><strong>IUBAT Prison</strong> is packed with premium features, components, and more!</p>
+    <p class="text-center mb-2"><strong>KODEEO Prison</strong> is packed with premium features, components, and more!</p>
     <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
 </div>
 
